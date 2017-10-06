@@ -1,4 +1,4 @@
-@echo on
+@echo off
 :: IMPORTANT PREREQUSITE: You must setup an environment variable by the name BATCHLOCATION pointing to the 
 :: directory that contains these batch files
 
@@ -65,3 +65,9 @@ set prod_cf_distribution_id=E362A9I7LUW959
 
 ::::::: RDS ::::::
 set rds_list=rds-instance-1 rds-instance-2
+
+:::::::::::::::::::::::::::::::::::::::::: Deployments :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: List of urls to open after deploying
+:: Use this if you need a few web links to open after you deploy for any documentation
+set post_deploy_urls="http://powerhouse.fic:7990/projects/SLM/repos/schoolviewerfrontend/commits?until=refs%2Fheads%2Fproduction"
+set post_deploy_urls="%post_deploy_urls%;http://powerhouse.fic:8090/pages/editpage.action?pageId=29950143"
